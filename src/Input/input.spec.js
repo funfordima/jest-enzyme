@@ -8,6 +8,16 @@ describe('Input component', () => {
     expect(component).toMatchSnapshot();
   });
 
+  it('should call onChange method', () => {
+    const mockCallBack = jest.fn();
+
+    const component = shallow(<Input onChange={mockCallBack} />);
+    expect(mockCallBack.mock.calls.length).toBe(0);
+    component.find('.input').simulate('change');
+
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+  });
+
   describe('default props', () => {
     it('should use default onChange', () => {
       const result = Input.defaultProps.onChange();
