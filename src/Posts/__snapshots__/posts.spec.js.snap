@@ -31,6 +31,11 @@ exports[`Post component should render Posts component 1`] = `
     }
     value={20}
   />
+  <Pagination
+    lastPage={10}
+    onClick={[Function]}
+    page={1}
+  />
   <Input
     onChange={[Function]}
     onKeyPress={[Function]}
@@ -91,6 +96,11 @@ exports[`Post component should render Posts component with children 1`] = `
       ]
     }
     value={20}
+  />
+  <Pagination
+    lastPage={10}
+    onClick={[Function]}
+    page={1}
   />
   <Input
     onChange={[Function]}
